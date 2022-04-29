@@ -5,19 +5,33 @@ Declarar una segunda clase llamada Empleado que herede de la clase Persona y agr
 sueldo y muestre si debe pagar impuestos (sueldo superior a 3000)
 También en el bloque principal del programa crear un objeto de la clase Empleado"""
 
+
 class Persona(object):
     def __init__(self):
         self.nombre = input("ingrese el nombre")
         self.edad = input("Ingrese la edad")
-        print("ACABA DE INICIALIZAR UNA PERSONA DE NOMBRE: ", self.nombre , "CON LA EDAD DE: ", self.edad)
+        print(
+            "ACABA DE INICIALIZAR UNA PERSONA DE NOMBRE: ",
+            self.nombre,
+            "CON LA EDAD DE: ",
+            self.edad,
+        )
+
 
 class Empleado(Persona):
     def __init__(self):
         Persona.__init__(self)
         self.sueldo = float(input("ingrese su sueldo"))
-        print("ACABA DE INICIALIZAR UN EMPLEADO DE NOMBRE: ", self.nombre , "CON LA EDAD DE: ", self.edad, "Y EL SUELDO DE", self.sueldo)        
+        print(
+            "ACABA DE INICIALIZAR UN EMPLEADO DE NOMBRE: ",
+            self.nombre,
+            "CON LA EDAD DE: ",
+            self.edad,
+            "Y EL SUELDO DE",
+            self.sueldo,
+        )
         self.Impuestos()
-        
+
     def Impuestos(self):
         if self.sueldo > 3000:
             print("debe pagar sus impuestos")
@@ -27,10 +41,3 @@ class Empleado(Persona):
 
 
 empleado1 = Empleado()
-
-
-
-        
-        
-
-
